@@ -3,7 +3,7 @@ import Validator from '../app';
 
 describe('Тестирование класса Validator', () => {
     test('Проверка валидации имени 1', () => {
-        expect(new Validator('Lila-shera_1099')
+        expect(new Validator('Lila-shera_109-')
             .ValidateUserName())
             .toBe(false);
     });
@@ -17,9 +17,14 @@ describe('Тестирование класса Validator', () => {
             .ValidateUserName())
             .toBe(false);
     });
-    test('Проверка валидации имени 3', () => {
+    test('Проверка валидации имени 4', () => {
         expect(new Validator('Lila-shera_109')
             .ValidateUserName())
             .toBe(false);
+    });
+    test('Проверка валидации имени 5', () => {
+        expect(new Validator('Lila-shera_109-L')
+            .ValidateUserName())
+            .toBe(true);
     });
 });
