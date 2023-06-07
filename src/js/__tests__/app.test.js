@@ -27,4 +27,19 @@ describe('Тестирование класса Validator', () => {
             .ValidateUserName())
             .toBe(true);
     });
+     test('Проверка валидации имени 5', () => {
+        expect(new Validator('Да')
+            .ValidateUserName())
+            .toBe(false);
+    });
+     test('Проверка валидации имени 5', () => {
+        expect(new Validator('ЯuserЫ')
+            .ValidateUserName())
+            .toBe(false);
+    });
+     test('Проверка валидации имени 5', () => {
+        expect(new Validator('Dimi2r')
+            .ValidateUserName())
+            .toBe(true);
+    });
 });
