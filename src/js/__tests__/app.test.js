@@ -42,4 +42,9 @@ describe('Тестирование класса Validator', () => {
             .ValidateUserName())
             .toBe(true);
     });
+     test('Проверка валидации имени 5', () => {
+        expect(new Validator('D1amir')
+            .ValidateUserName())
+            .toBe(true);
+    });
 });
