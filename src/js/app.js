@@ -5,7 +5,7 @@ export default class Validator {
     }
 
     ValidateUserName() {
-        const step1 = new RegExp('^[A-z]?[A-z-_\\d]*[A-z]$', 'i');
+        const step1 = new RegExp('^[A-z]?[A-z-_\\d]*[A-z]$');
         const step2 = new RegExp('^([A-z-_]\\d{0,3})*$');
         if (step1.test(this.userName)) {
             if (step2.test(this.userName)) {
